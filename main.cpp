@@ -89,13 +89,13 @@ bool deleteElem(SqList *L,int i,ElemType &e){
 }
 
 void deleteRepeatedElem(SqList *L){
-    int slow=0;
-    int fast=0;
+    int slowPtr=0;
+    int fastPtr=0;
     int count=0;
-    for (;fast<L->length;fast++) {
-        if (L->data[fast + 1] > L->data[fast]) {
-            L->data[slow]=L->data[fast];
-            slow++;
+    for (;fastPtr<L->length;fastPtr++) {
+        if (L->data[fastPtr + 1] > L->data[fastPtr]) {
+            L->data[slowPtr]=L->data[fastPtr];
+            slowPtr++;
         } else{
             count++;
         }
